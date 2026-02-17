@@ -1,101 +1,100 @@
-# Movie Explorer
+# 🎬 Movie Explorer
 
-A simple Movie Explorer web app built as a take-home project. Users can search movies, view details, and save favorites with personal ratings and notes.
+A full-stack Movie Explorer web application built as a take-home assignment.  
+Users can search for movies, view details, and save favorites with personal ratings and notes.
+
+---
 
 ## 🌐 Live Demo
 
-https://movie-explorer-mu-sage.vercel.app/
+🔗 https://movie-explorer-mu-sage.vercel.app/
 
 ## 📦 Repository
 
-https://github.com/iMeet07/Movie-Explorer
+🔗 https://github.com/iMeet07/Movie-Explorer
 
 ---
 
 ## ✨ Features
 
-### 🔎 Search
+### 🔎 Movie Search
 - Search movies by title
-- Results display:
+- Debounced input to reduce unnecessary API calls
+- Results include:
   - Poster
   - Title
   - Release date
   - Short overview
-- Debounced search input to reduce unnecessary API calls
 
 ### 🎬 Movie Details
-- Details modal for selected movie
+- Modal-based details view
 - Displays:
   - Poster
   - Full overview
   - Release date
-  - Runtime (if available)
-- Modal can be closed via:
+  - Runtime (when available)
+- Modal closes via:
   - Close button
-  - Clicking outside
-  - ESC key
+  - Outside click
+  - Escape key
 
 ### ⭐ Favorites
-- Add / remove movies from favorites
-- Prevents duplicate favorites
-- Each favorite supports:
+- Add or remove favorites
+- Prevents duplicates
+- Supports:
   - Personal rating (1–5)
-  - Optional note
+  - Optional notes
 
 ### 💾 Persistence
 - Favorites stored in LocalStorage
-- Data survives page refresh
+- Data survives browser refresh
 
-### ⚠️ Error Handling
-- Empty search state
+### ⚠️ Error & Empty States
+- Loading skeleton UI
 - No results state
 - API/network error handling
-- Loading skeleton UI
 
 ---
 
 ## 🧱 Tech Stack
 
-- Next.js (App Router)
-- React
-- TypeScript
-- Tailwind CSS
-- Next.js API Routes (server-side proxy)
-- LocalStorage for persistence
+- **Next.js (App Router)**
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Next.js API Routes** (server-side proxy)
+- **LocalStorage** for persistence
 
 ---
 
 ## 🔐 API Integration
 
-Movie data is fetched from TMDB via server-side API routes.
+Movie data is fetched from TMDB using server-side API routes.
 
-Flow:
+**Request flow:**
 
-Frontend → Next.js API Route → TMDB API
 
 ### Why this approach?
 - Keeps API key secure (never exposed to browser)
-- Centralized error handling
-- Allows future response normalization/caching
-
----
-
+- Centralized API error handling
+- Decouples frontend from third-party API structure
+- Allows future caching/transformations
 
 ---
 
 ## 🧠 Technical Decisions & Tradeoffs
 
-### 1. API Proxy
-Used Next.js API routes to hide the TMDB API key and decouple frontend from external APIs.
+### 1️⃣ API Proxy
+Used Next.js API routes to keep API credentials server-side and simplify frontend data fetching.
 
-### 2. State Management
-Used React local state + custom hooks instead of global state libraries to keep complexity low for the scope of the project.
+### 2️⃣ State Management
+Used React local state and custom hooks instead of global state libraries to keep complexity low for project scope.
 
-### 3. Persistence
-LocalStorage was chosen as the baseline persistence strategy to satisfy requirements quickly without adding backend complexity.
+### 3️⃣ Persistence
+LocalStorage was chosen for baseline persistence to satisfy requirements quickly without introducing backend infrastructure.
 
-### 4. UI Approach
-Focused on functionality and clarity over heavy styling, keeping the workflow straightforward.
+### 4️⃣ UI Approach
+Prioritized core functionality and clear workflows over heavy styling due to time constraints.
 
 ---
 
@@ -103,18 +102,48 @@ Focused on functionality and clarity over heavy styling, keeping the workflow st
 
 - No pagination or infinite scrolling
 - No server-side persistence/database
-- Basic styling only
+- Minimal styling focus
 - No authentication or user accounts
 
 ---
 
 ## 🚀 Improvements With More Time
 
-- Server-side favorites persistence
-- Pagination or infinite scroll
+- Server-side persistence for favorites
+- Pagination / infinite scrolling
 - API response caching
-- Accessibility improvements (ARIA labels, keyboard navigation)
-- Better mobile responsiveness
-- Unit/integration tests
+- Accessibility enhancements
+- Better mobile optimization
+- Unit and integration tests
 
 ---
+
+## ⚡ Setup in 5 Quick Steps
+
+Get the project running locally in just a few minutes.
+
+### 1️⃣ Clone the Repository
+
+git clone https://github.com/iMeet07/Movie-Explorer.git
+cd Movie-Explorer/movie-explorer
+
+2️⃣ Install Dependencies
+
+npm install
+
+3️⃣ Configure Environment Variables
+
+Create a .env.local file in the root directory:
+
+TMDB_API_KEY=YOUR_TMDB_API_KEY
+Get your free API key from The Movie Database (TMDB).
+
+4️⃣ Start the Development Server
+
+npm run dev
+Open your browser and visit:
+
+http://localhost:3000
+
+MIT License
+© 2026 Meet. All rights reserved.
