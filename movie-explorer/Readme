@@ -1,0 +1,22 @@
+# Movie Explorer
+
+## Setup
+npm install
+npm run dev
+
+## Technical Decisions
+- Next.js API routes used as proxy to protect TMDB API key.
+- LocalStorage chosen for persistence due to scope and time.
+- Local component state used for simplicity.
+
+## Tradeoffs
+- No pagination.
+- Minimal styling.
+- No backend database.
+
+## Improvements with more time
+- Pagination / infinite scrolling
+- API response caching
+- Accessibility improvements
+- Server-side favorites persistence
+
