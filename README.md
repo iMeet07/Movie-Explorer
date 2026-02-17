@@ -41,3 +41,6 @@ If time allowed, I would explore enhancements such as pagination, server-side pe
 ## 🙏 Thank You
 
 I appreciate the opportunity to complete this project and look forward to discussing the implementation choices and tradeoffs during the technical interview.
+
+Licensed under the MIT License.
+
