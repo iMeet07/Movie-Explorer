@@ -1,36 +1,120 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Movie Explorer
 
-## Getting Started
+A simple Movie Explorer web app built as a take-home project. Users can search movies, view details, and save favorites with personal ratings and notes.
 
-First, run the development server:
+## 🌐 Live Demo
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+https://YOUR-VERCEL-LINK.vercel.app
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Repository
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+https://github.com/iMeet07/Movie-Explorer
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+---
 
-## Learn More
+## ✨ Features
 
-To learn more about Next.js, take a look at the following resources:
+### 🔎 Search
+- Search movies by title
+- Results display:
+  - Poster
+  - Title
+  - Release date
+  - Short overview
+- Debounced search input to reduce unnecessary API calls
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 🎬 Movie Details
+- Details modal for selected movie
+- Displays:
+  - Poster
+  - Full overview
+  - Release date
+  - Runtime (if available)
+- Modal can be closed via:
+  - Close button
+  - Clicking outside
+  - ESC key
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### ⭐ Favorites
+- Add / remove movies from favorites
+- Prevents duplicate favorites
+- Each favorite supports:
+  - Personal rating (1–5)
+  - Optional note
 
-## Deploy on Vercel
+### 💾 Persistence
+- Favorites stored in LocalStorage
+- Data survives page refresh
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### ⚠️ Error Handling
+- Empty search state
+- No results state
+- API/network error handling
+- Loading skeleton UI
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
+
+## 🧱 Tech Stack
+
+- Next.js (App Router)
+- React
+- TypeScript
+- Tailwind CSS
+- Next.js API Routes (server-side proxy)
+- LocalStorage for persistence
+
+---
+
+## 🔐 API Integration
+
+Movie data is fetched from TMDB via server-side API routes.
+
+Flow:
+
+Frontend → Next.js API Route → TMDB API
+
+### Why this approach?
+- Keeps API key secure (never exposed to browser)
+- Centralized error handling
+- Allows future response normalization/caching
+
+---
+
+
+---
+
+## 🧠 Technical Decisions & Tradeoffs
+
+### 1. API Proxy
+Used Next.js API routes to hide the TMDB API key and decouple frontend from external APIs.
+
+### 2. State Management
+Used React local state + custom hooks instead of global state libraries to keep complexity low for the scope of the project.
+
+### 3. Persistence
+LocalStorage was chosen as the baseline persistence strategy to satisfy requirements quickly without adding backend complexity.
+
+### 4. UI Approach
+Focused on functionality and clarity over heavy styling, keeping the workflow straightforward.
+
+---
+
+## ⚖️ Known Limitations
+
+- No pagination or infinite scrolling
+- No server-side persistence/database
+- Basic styling only
+- No authentication or user accounts
+
+---
+
+## 🚀 Improvements With More Time
+
+- Server-side favorites persistence
+- Pagination or infinite scroll
+- API response caching
+- Accessibility improvements (ARIA labels, keyboard navigation)
+- Better mobile responsiveness
+- Unit/integration tests
+
+---
