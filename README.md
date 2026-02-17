@@ -8,7 +8,7 @@ This repository contains a working prototype built with Next.js that allows user
 
 ## 🚀 Quick Links
 
-- **Live App:** https://YOUR-VERCEL-LINK.vercel.app  
+- **Live App:** https://movie-explorer-mu-sage.vercel.app/  
 - **Main Project Documentation:** `src/README.md` (or the detailed README in the project folder)
 
 ---
