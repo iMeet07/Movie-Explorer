@@ -4,7 +4,7 @@ A simple Movie Explorer web app built as a take-home project. Users can search m
 
 ## 🌐 Live Demo
 
-movie-explorer-mu-sage.vercel.app
+https://movie-explorer-mu-sage.vercel.app/
 
 ## 📦 Repository
 
