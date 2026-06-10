@@ -1,0 +1,22 @@
+# Large raw data directories
+Dataset/
+Dataset 2/
+Dataset 3/
+Dataset 4/
+Zip Files/
+Background/
+Meetings/
+
+# Large generated CSV files (exceed GitHub 100MB limit)
+all_with_comp_from_puf.csv
+tqip13_feb14_nonpenetrating1.csv
+tqip13_final.csv
+
+# macOS
+.DS_Store
+
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.egg-info/
+.env
